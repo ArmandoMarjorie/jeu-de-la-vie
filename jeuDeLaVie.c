@@ -34,41 +34,49 @@ void update(Grille grille, SDL_Surface* ecran, SDL_Rect position, SDL_Surface *l
 			
 			if(grille[i][j-ZOOM]!=NULL && grille[i][j-ZOOM]->etatPrecedent==VIVANTE) //cellule a gauche
 			{
+				printf("%d %d\n",i,j-ZOOM);
 				printf("cellule a gauche\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i][j+ZOOM]!=NULL && grille[i][j+ZOOM]->etatPrecedent==VIVANTE) //cellule a droite
 			{
+				printf("%d %d\n",i,j+ZOOM);
 				printf("cellule a droite\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i-ZOOM][j]!=NULL && grille[i-ZOOM][j]->etatPrecedent==VIVANTE) //cellule en haut
 			{
+				printf("%d %d\n",i-ZOOM,j);
 				printf("cellule en haut\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i+ZOOM][j]!=NULL && grille[i+ZOOM][j]->etatPrecedent==VIVANTE) //cellule en bas
 			{
+				printf("%d %d\n",i+ZOOM,j);
 				printf("cellule en bas\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i-ZOOM][j-ZOOM]!=NULL && grille[i-ZOOM][j-ZOOM]->etatPrecedent==VIVANTE) //cellule en haut a gauche
 			{
+				printf("%d %d\n",i-ZOOM,j-ZOOM);
 				printf("cellule en haut a gauche\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i-ZOOM][j+ZOOM]!=NULL && grille[i-ZOOM][j+ZOOM]->etatPrecedent==VIVANTE) //cellule en haut a droite
 			{
+				printf("%d %d\n",i-ZOOM,j+ZOOM);
 				printf("cellule en haut a droite\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i+ZOOM][j-ZOOM]!=NULL && grille[i+ZOOM][j-ZOOM]->etatPrecedent==VIVANTE) //cellule en bas a gauche
 			{
+				printf("%d %d\n",i+ZOOM,j-ZOOM);
 				printf("cellule en bas a gauche\n");
 				cptVoisinsVivants++;
 			}
 			if(grille[i+ZOOM][j+ZOOM]!=NULL && grille[i+ZOOM][j+ZOOM]->etatPrecedent==VIVANTE) //cellule en bas a droite
 			{
+				printf("%d %d\n",i+ZOOM,j+ZOOM);
 				printf("cellule en bas a droite\n");
 				cptVoisinsVivants++;
 			}
