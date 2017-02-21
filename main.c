@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 
 	/* Fin */
 	for (i=0; i<LONGUEUR; i++) 
-        SDL_FreeSurface(lignes[i]);
+        	SDL_FreeSurface(lignes[i]);
 	SDL_Quit();
 	return EXIT_SUCCESS;
 }
