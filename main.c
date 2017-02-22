@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	/* Initialisation */
 		
 	/* Initialisation pour la fenêtre */
-    	if (SDL_Init(SDL_INIT_VIDEO) == -1)
+    if (SDL_Init(SDL_INIT_VIDEO) == -1)
 	{
 		fprintf(stderr, "Erreur d'initialisation de la SDL : %s\n", SDL_GetError());
 		exit(EXIT_FAILURE); 
@@ -47,17 +47,17 @@ int main(int argc, char *argv[])
 	{
 		update(grille, ecran, position, lignes);
 		printf("Update -> OK\n");
-	       /*SDL_WaitEvent(&event);
+	    SDL_WaitEvent(&event);
 		switch(event.type)
 		{
 			case SDL_QUIT:
 			continuer = 0;
-		}*/
-        }
+		}
+    }
 
 	/* Fin */
 	for (i=0; i<LONGUEUR; i++) 
-        	SDL_FreeSurface(lignes[i]);
+        SDL_FreeSurface(lignes[i]);
 	SDL_Quit();
 	return EXIT_SUCCESS;
 }
